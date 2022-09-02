@@ -45,19 +45,6 @@
         drvs = map build_ parameters;
       in writeReferences drvs;
 
-      # Example:
-      #
-      # density = compute {
-      #   fixedParameters = {
-      #     fluid_static_pressure = 1.e5; 
-      #   };
-      #   variableParameters = {
-      #     fluid_density = arange { start = 1000.; stop = 1200.; step = 10; };
-      #   };
-      #   executable = myscript;
-      #   name = "result.json";
-      # };
-
     in {
       inherit compute;
     };
